@@ -4,7 +4,7 @@
   "version": "0.51.1",
   "description": "Black UI for Atom",
   "license": "MIT",
-  "repository": "https://github.com/atom/atom-dark-ui",
+  "repository": "https://github.com/OneHunnid/Limbrick-UI-Atom",
   "engines": {
     "atom": ">0.40.0"
   }
