@@ -1,6 +1,11 @@
 @import "ui-variables";
 @import "ui-mixins";
 
+atom-text-editor {
+  background-color: #0d0d0d;
+  // margin-top: 12px;
+}
+
 atom-text-editor[mini], atom-text-editor[mini]::shadow {
   color: @text-color-highlight;
   background-color: @input-background-color;
@@ -18,9 +23,42 @@ atom-text-editor[mini].is-focused, atom-text-editor[mini].is-focused::shadow {
   .selection .region { background-color: desaturate(@background-color-info, 50%); }
 }
 
-// FIXME: these should go in syntax themes?
 atom-text-editor, atom-text-editor::shadow {
+
+  .gutter {
+      overflow: visible;
+      z-index: 2;
+  }
+
   .gutter.drop-shadow {
     -webkit-box-shadow: -2px 0 10px 2px #222;
+  }
+
+  .line-number {
+    opacity: 1;
+    position: relative;
+    background-color: #0d0d0d;
+    color: #696969;
+  }
+
+  .line-numbers {
+    position: relative;
+    background-color: #0d0d0d !important;
+  }
+
+  .line-number.cursor-line-no-selection {
+    background-color: #0d0d0d;
+    color: #fff;
+    position: relative;
+    height: 20px;
+    border-bottom: 1px solid #a2a2a2;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100vw;
+      bottom: -1px;
+      border-bottom: 1px solid #a2a2a2;
+    }
   }
 }
